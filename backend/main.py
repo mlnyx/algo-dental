@@ -16,7 +16,12 @@ app = FastAPI(title="ALGO - 치과 운영 OS")
 # CORS 설정
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://algo-dental.vercel.app",
+        "https://algo-dental-p1xsufwoe-dsad6.vercel.app",
+        "https://*.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
